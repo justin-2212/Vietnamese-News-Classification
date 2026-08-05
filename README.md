@@ -1,7 +1,4 @@
 # Vietnamese-News-Classification
-
-# Vietnamese News Classification System
-
 An end-to-end Vietnamese news classification system built on a self-collected VNExpress dataset. This project benchmarks multiple machine learning and deep learning approaches, then deploys the best-performing fine-tuned PhoBERT model through a web-based demo.
 
 ## Features
