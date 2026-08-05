@@ -21,13 +21,13 @@ An end-to-end Vietnamese news classification system built on a self-collected VN
 ## Experimental Results
 
 | Model | Accuracy | Macro F1 |
-|----------------------|---------:|---------:|
-| Naive Bayes | 87.07% | 0.633 |
+|-------------------------|---------:|---------:|
+| Naive Bayes | 88.01% | 0.600 |
 | SVM | 94.45% | 0.792 |
-| CNN | 88.01% | 0.600 |
-| BiLSTM | 92.99% | 0.710 |
-| FastText + BiLSTM | 92.52% | 0.698 |
-| **Fine-tuned PhoBERT** | **94.84%** | **0.798** |
+| CNN (Single Kernel) | 92.52% | 0.698 |
+| Multi-Kernel CNN | 92.99% | 0.710 |
+| BiLSTM | 87.07% | 0.633 |
+| **PhoBERT (Fine-tuned)** | **94.84%** | **0.798** |
 
 The fine-tuned PhoBERT model achieved the best overall performance and was selected for deployment in the web application.
 
