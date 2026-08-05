@@ -1,10 +1,11 @@
-# Vietnamese-News-Classification
-An end-to-end Vietnamese news classification system built on a self-collected VNExpress dataset. This project benchmarks multiple machine learning and deep learning approaches, then deploys the best-performing fine-tuned PhoBERT model through a web-based demo.
+# Vietnamese News Classification System
+
+An end-to-end Vietnamese news classification system built on a self-collected VNExpress dataset. This project benchmarks multiple machine learning and deep learning approaches and deploys the best-performing fine-tuned PhoBERT model through a web-based demo.
 
 ## Features
 
 - End-to-end Vietnamese news classification pipeline.
-- Benchmarking of Naive Bayes, SVM, CNN, BiLSTM, and fine-tuned PhoBERT.
+- Benchmarking of Naive Bayes, SVM, CNN, BiLSTM, and a fine-tuned PhoBERT model.
 - Web application for real-time text classification.
 - RESTful backend for model inference.
 
@@ -20,21 +21,23 @@ An end-to-end Vietnamese news classification system built on a self-collected VN
 ## Experimental Results
 
 | Model | Accuracy | Macro F1 |
-|--------|---------:|----------:|
-| Naive Bayes | - | - |
-| SVM | - | - |
-| CNN | - | - |
-| BiLSTM | - | - |
+|----------------------|---------:|---------:|
+| Naive Bayes | 87.07% | 0.633 |
+| SVM | 94.45% | 0.792 |
+| CNN | 88.01% | 0.600 |
+| BiLSTM | 92.99% | 0.710 |
+| FastText + BiLSTM | 92.52% | 0.698 |
 | **Fine-tuned PhoBERT** | **94.84%** | **0.798** |
 
-PhoBERT achieved the best overall performance and was selected for deployment.
+The fine-tuned PhoBERT model achieved the best overall performance and was selected for deployment in the web application.
 
 ## Project Structure
 
 ```text
 frontend/      React web application
 backend/       FastAPI inference service
-notebooks/     Model training and experiments
+data/          Raw VNExpress dataset (.csv)
+notebooks/     Model training and benchmarking
 docs/          Project report
 ```
 
@@ -58,4 +61,5 @@ npm run dev
 
 ## Notes
 
-The fine-tuned PhoBERT model is not included in this repository because it exceeds GitHub's file size limit.
+- The `data/` directory contains the raw VNExpress dataset used for model training and evaluation.
+- The fine-tuned PhoBERT model is not included in this repository because it exceeds GitHub's file size limit.
